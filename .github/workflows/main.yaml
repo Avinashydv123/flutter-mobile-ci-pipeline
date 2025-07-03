@@ -1,0 +1,26 @@
+name: Flutter CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main 
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter test integration_test
+      - run: flutter build apk --release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apk
+          path: build/app/outputs/flutter-apk/*.apk

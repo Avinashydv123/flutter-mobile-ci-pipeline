@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "103450706778",
+    "project_id": "hindus-r-us-dev",
+    "storage_bucket": "hindus-r-us-dev.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103450706778:android:059cbe33e59b1f9a84e963",
+        "android_client_info": {
+          "package_name": "com.hindusrus.app.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103450706778-83l5drjqc24d4m0b04npil6ph56p4nj4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hindusrus.app.dev",
+            "certificate_hash": "800fcf052533b33b0712b3d1ce3bfa756092cead"
+          }
+        },
+        {
+          "client_id": "103450706778-grrekbdo5q1i55hchf3uo77ma0oqtser.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALXCyP0xHsr9nKbNUyLq1U1MFqzeTiYVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103450706778-grrekbdo5q1i55hchf3uo77ma0oqtser.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "103450706778-e2c63g6j3id1meucgsfasstkenns0a93.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hindusrus.app.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

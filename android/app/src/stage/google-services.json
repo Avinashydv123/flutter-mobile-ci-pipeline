@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "727212365457",
+    "project_id": "hindus-r-us-stage",
+    "storage_bucket": "hindus-r-us-stage.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727212365457:android:3fca481e1dcc46ecce5130",
+        "android_client_info": {
+          "package_name": "com.hindusrus.app.stage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8yYYPxsQihUTv3R27OSzn9V4LuAqDaPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

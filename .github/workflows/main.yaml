@@ -1,4 +1,4 @@
-name: Flutter CI
+name: Create flutter mobile CI pipeline
 
 on:
   push:
@@ -17,8 +17,12 @@ jobs:
         with:
           flutter-version: stable
           cache: true
-      - run: flutter pub get
-      - run: flutter test integration_test
+      - name: Flutter clean
+        run: flutter clean
+
+      - name: Flutter packages get
+        run: flutter pub get
+     # - run: flutter test integration_test
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
         with:

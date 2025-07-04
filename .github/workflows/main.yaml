@@ -15,14 +15,14 @@ jobs:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: stable
+          flutter-version: 'stable'
           cache: true
       - name: Flutter clean
         run: flutter clean
 
       - name: Flutter packages get
         run: flutter pub get
-     # - run: flutter test integration_test
+      - run: flutter test
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
         with:

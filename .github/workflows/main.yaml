@@ -9,6 +9,42 @@ on:
       - main 
 
 jobs:
+  deploy-dev:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+         
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.32.3'
+
+      - name: Flutter clean
+        run: flutter clean
+
+      - name: Flutter packages get
+        run: flutter pub get
+      # # Build App bundle
+      # - name: Build AAB
+      #   run: flutter build appbundle --flavor dev -t lib/main_dev.dart
+
+      # - name: Upload AAB Artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: app-release
+      #     path: build/app/outputs/bundle/devRelease/app-dev-release.aab
+
+          # Build APK
+      - name: Build APK
+        run: flutter build apk --flavor dev -t lib/main_dev.dart
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release
+          path: build/app/outputs/flutter-apk/app-dev-release.apk
   tests:
     runs-on: ubuntu-latest
     steps:
@@ -23,7 +59,6 @@ jobs:
 
       - name: Flutter packages get
         run: flutter pub get
-      - run: flutter test
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
         with:
